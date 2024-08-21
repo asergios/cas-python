@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cas-python"
+version = "0.0.1"
+description = "Database of CAS Registry Number for Python"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["cas", "registry", "chemical", "abstracts", "service", "database", "formula"]
+authors = [
+  {name = "Antonio Silva"}
+]
+maintainers = [
+  {name = "Antonio Silva"}
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pre-commit>=3.8.0,<4.0.0",
+  "ruff>=0.6.1,<1.0.0",
+  "black>=24.8.0,<25.0.0", 
+  "mypy>=1.11.1,<2.0.0"
+]
+test = []
+
+[project.urls]
+"Homepage" = "https://github.com/asergios/cas-python"
+"Bug Reports" = "https://github.com/asergios/cas-python/issues"
+"Source" = "https://github.com/asergios/cas-python/"

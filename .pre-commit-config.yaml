@@ -1,0 +1,21 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (autoflake and isort)
+        entry: ruff
+        args: ["check", "--select", "I,F", "--fix"]
+        language: python
+        types: [python]
+
+      - id: black
+        name: black
+        entry: black
+        language: python
+        types: [python]
+
+      - id: mypy
+        name: mypy
+        entry: mypy
+        language: python
+        types: [python]
