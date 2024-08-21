@@ -38,3 +38,10 @@ test = []
 "Homepage" = "https://github.com/asergios/cas-python"
 "Bug Reports" = "https://github.com/asergios/cas-python/issues"
 "Source" = "https://github.com/asergios/cas-python/"
+
+[tool.setuptools]
+packages = ["cas"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"cas" = ["database/*.json"]
