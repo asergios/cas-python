@@ -53,7 +53,7 @@ class CASDatabase:
             self._cas_entries.append(cas_entry)
 
             for key, value in entry.items():
-                self._inverted_index[key][value] = cas_entry
+                self._inverted_index[key][value.lower()] = cas_entry
 
     def get(self, default: Optional[Any] = None, **kw: Optional[str]):
         if len(kw) != 1:
@@ -63,7 +63,7 @@ class CASDatabase:
         if not isinstance(value, str):
             raise LookupError(f"Value for {field} needs to be str")
 
-        return self._inverted_index.get(field, {}).get(value, default)
+        return self._inverted_index.get(field, {}).get(value.lower(), default)
 
     def __iter__(self) -> Iterator["CASEntry"]:
         return iter(self._cas_entries)
